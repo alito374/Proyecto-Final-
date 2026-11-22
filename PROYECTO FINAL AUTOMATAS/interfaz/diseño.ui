@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ventanaPrincipal</class>
+ <widget class="QMainWindow" name="ventanaPrincipal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ALMA</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #F8F7FC;
+}
+
+QWidget#centralwidget {
+    background-color: #F8F7FC;
+}
+
+QLabel {
+    color: #17151F;
+}
+
+QPushButton {
+    background-color: #C4B5FD;
+    color: #17151F;
+    border: 1px solid #A78BFA;
+    border-radius: 7px;
+    padding: 7px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #DDD6FE;
+}
+
+QLineEdit {
+    background-color: white;
+    color: #17151F;
+    border: 2px solid #C4B5FD;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+QPlainTextEdit {
+    background-color: #17151F;
+    color: #F5F3FF;
+    border: 2px solid #C4B5FD;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: Consolas;
+    font-size: 13px;
+    selection-background-color: #65548A;
+}
+
+QTextEdit {
+    background-color: #EDE9FE;
+    color: #17151F;
+    border: 2px solid #C4B5FD;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: Consolas;
+    font-size: 12px;
+}
+
+QPushButton#btnAnalizar {
+    background-color: #C4B5FD;
+    color: #17151F;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton#btnBuscar {
+    background-color: #17151F;
+    color: white;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralwidget {
+    background-color: #F8F7FF;
+}</string>
+   </property>
+   <widget class="QLabel" name="ALMA">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>30</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: #17151F;
+    font-size: 30px;
+    font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>ALMA</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="subtituloALMA">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>80</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>-1</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: #65548A;
+    font-size: 14px;
+    font-style: italic;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Lenguaje de Programación</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGuardar">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>110</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Traditional Arabic</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Guardar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAbrir">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>110</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Traditional Arabic</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Abrir</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnNuevo">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>110</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Traditional Arabic</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Nuevo</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCortar">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>110</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Traditional Arabic</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Cortar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCopiar">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>110</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Traditional Arabic</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Copiar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnPegar">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>110</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Traditional Arabic</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Pegar</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="editorCodigo">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>220</y>
+      <width>531</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="plainText">
+     <string>INICIO
+GUARDAR numero = 10
+MOSTRAR numero
+FIN</string>
+    </property>
+    <property name="placeholderText">
+     <string>INICIO  GUARDAR numero = 10  MOSTRAR numero  FIN</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAnalizar">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>490</y>
+      <width>531</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Traditional Arabic</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #7C3AED;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #6D28D9;
+}</string>
+    </property>
+    <property name="text">
+     <string>Analizar Código</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Resultados">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>540</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Traditional Arabic</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Resultados y errores</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="tituloResultados">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>570</y>
+      <width>531</width>
+      <height>64</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Aquí aparecerán los resultados del análisis...</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>160</y>
+      <width>531</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="entradaBuscar">
+       <property name="font">
+        <font>
+         <family>Traditional Arabic</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Buscar en el código...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnBuscar">
+       <property name="font">
+        <font>
+         <family>Traditional Arabic</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Buscar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
