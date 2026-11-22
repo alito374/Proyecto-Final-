@@ -1,0 +1,18 @@
+
+// EJEMPLO DE PROGRAMA CON ERRORES
+
+inicio {
+
+    edad = 20
+
+    mostrar("Hola NovaCode")
+
+    si (edad > ) {
+
+        mostrar("Error");
+
+    }
+
+    @
+
+} fin

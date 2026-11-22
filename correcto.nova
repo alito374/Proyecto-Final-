@@ -1,0 +1,34 @@
+
+// EJEMPLO DE PROGRAMA VALIDO
+
+inicio {
+
+    nombre = "Alondra";
+    edad = 20;
+
+    numero1 = 10;
+    numero2 = 5;
+
+    resultado = numero1 + numero2;
+
+    mostrar("Bienvenida a NovaCode");
+
+    mostrar(resultado);
+
+    si (edad >= 18) {
+
+        mostrar("Eres mayor de edad");
+
+    } sino {
+
+        mostrar("Eres menor de edad");
+
+    }
+
+    mientras (edad < 25) {
+
+        edad = edad + 1;
+
+    }
+
+} fin
