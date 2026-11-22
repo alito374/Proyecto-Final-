@@ -7,7 +7,7 @@ Responsable: Integrante 2
 
 import ply.yacc as yacc
 
-from lexer import tokens, build_lexer
+from analizador.lexer import tokens, build_lexer
 
 # ==========================================
 # 1. PRECEDENCIA DE OPERADORES

@@ -19,7 +19,7 @@ from PyQt6.QtWidgets import (
 
 from PyQt6.QtGui import QAction, QFont
 
-from parser import analizar
+from analizador.parser import analizar
 
 
 # ==========================================

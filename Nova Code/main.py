@@ -4,7 +4,7 @@ NOVACODE IDE
 Archivo principal
 """
 
-from editor import main
+from ui.editor import main
 
 if __name__ == "__main__":
     main()
