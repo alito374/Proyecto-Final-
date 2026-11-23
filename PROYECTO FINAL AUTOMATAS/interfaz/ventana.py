@@ -1,5 +1,6 @@
 from pathlib import Path
 from PyQt6.QtWidgets import QMainWindow, QFileDialog, QMessageBox
+from PyQt6.QtGui import QTextDocument
 from PyQt6 import uic
 
 
@@ -18,6 +19,7 @@ class VentanaALMA(QMainWindow):
         self.btnNuevo.clicked.connect(self.nuevo_archivo)
         self.btnAbrir.clicked.connect(self.abrir_archivo)
         self.btnGuardar.clicked.connect(self.guardar_archivo)
+        self.btnBuscar.clicked.connect(self.buscar_texto)
 
     def copiar_texto(self):
         self.editorCodigo.copy()
@@ -85,6 +87,33 @@ class VentanaALMA(QMainWindow):
                     "Error al guardar",
                     "No se pudo guardar el archivo:\n{error}"
                 )
+
+    def buscar_texto(self):
+        palabra = self.txtBuscar.text().strip()
+
+        if not palabra:
+            QMessageBox.information(
+                self,
+                "Buscar",
+                "Escribe una palabra para buscar."
+            )
+            return
+
+        encontrado = self.editorCodigo.find(palabra)
+
+        if not encontrado:
+            cursor = self.editorCodigo.textCursor()
+            cursor.movePosition(cursor.MoveOperation.Start)
+            self.editorCodigo.setTextCursor(cursor)
+
+            encontrado = self.editorCodigo.find(palabra)
+
+        if not encontrado:
+            QMessageBox.information(
+                self,
+                "Buscar",
+                f"No se encontró '{palabra}' en el código."
+            )
 
 
 
