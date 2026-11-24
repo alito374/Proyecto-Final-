@@ -1,5 +1,7 @@
 
 import ply.lex as lex
+# Lista para guardar los errores léxicos
+errores_lexicos = []
 
 # Palabras reservadas de nuestro lenguaje ALMA
 reservadas = {
@@ -105,10 +107,12 @@ def t_comentario(t):
 
 # Mostrar errores léxicos
 def t_error(t):
-    print(
+    mensaje = (
         f"Error léxico en la línea {t.lexer.lineno}: "
         f"carácter no reconocido '{t.value[0]}'"
     )
+
+    errores_lexicos.append(mensaje)
     t.lexer.skip(1)
 
 

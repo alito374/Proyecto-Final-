@@ -1,6 +1,9 @@
-
 import ply.yacc as yacc
-from lexer import tokens, lexer
+
+if __package__:
+    from .lexer import tokens, lexer, errores_lexicos
+else:
+    from lexer import tokens, lexer, errores_lexicos
 
 
 # Guardar los errores encontrados
@@ -92,19 +95,22 @@ parser = yacc.yacc(write_tables=False, debug=False)
 
 
 # Analizar un programa ALMA
+
 def analizar(codigo):
     errores.clear()
+    errores_lexicos.clear()
     lexer.lineno = 1
 
     resultado = parser.parse(codigo, lexer=lexer)
 
-    if errores:
-        return False, errores.copy()
+    if errores_lexicos or errores:
+        return False, errores_lexicos + errores
 
     if resultado is None:
         return False, ["No se pudo analizar el programa."]
 
     return True, resultado
+
 
 
 
@@ -124,3 +130,4 @@ DESCANSA"""
         print("Se encontraron errores:")
         for error in resultado:
             print(error)
+
