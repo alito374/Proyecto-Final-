@@ -273,7 +273,7 @@ MOSTRAR numero
 FIN</string>
       </property>
       <property name="placeholderText">
-       <string>INICIO  GUARDAR numero = 10  MOSTRAR numero  FIN</string>
+       <string/>
       </property>
      </widget>
     </item>

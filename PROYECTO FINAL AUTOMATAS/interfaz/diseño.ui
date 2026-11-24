@@ -231,7 +231,7 @@ QPushButton#btnBuscar {
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLineEdit" name="entradaBuscar">
+       <widget class="QLineEdit" name="txtBuscar">
         <property name="font">
          <font>
           <family>Traditional Arabic</family>
@@ -239,6 +239,9 @@ QPushButton#btnBuscar {
          </font>
         </property>
         <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
          <string>Buscar en el código...</string>
         </property>
        </widget>
@@ -267,13 +270,10 @@ QPushButton#btnBuscar {
        </font>
       </property>
       <property name="plainText">
-       <string>INICIO
-GUARDAR numero = 10
-MOSTRAR numero
-FIN</string>
+       <string>Bienvenido a ALMA</string>
       </property>
       <property name="placeholderText">
-       <string>INICIO  GUARDAR numero = 10  MOSTRAR numero  FIN</string>
+       <string/>
       </property>
      </widget>
     </item>

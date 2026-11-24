@@ -1,10 +1,12 @@
 from pathlib import Path
 from PyQt6.QtWidgets import QMainWindow, QFileDialog, QMessageBox
-from PyQt6.QtGui import QTextDocument
+from PyQt6.QtGui import QTextDocument, QColor
 from PyQt6 import uic
+from analizador.parser import analizar
 
 
 class VentanaALMA(QMainWindow):
+
 
     def __init__(self):
         super().__init__()
@@ -20,6 +22,8 @@ class VentanaALMA(QMainWindow):
         self.btnAbrir.clicked.connect(self.abrir_archivo)
         self.btnGuardar.clicked.connect(self.guardar_archivo)
         self.btnBuscar.clicked.connect(self.buscar_texto)
+        self.btnAnalizar.clicked.connect(self.analizar_codigo)
+        self.tituloResultados.setReadOnly(True)
 
     def copiar_texto(self):
         self.editorCodigo.copy()
@@ -114,6 +118,47 @@ class VentanaALMA(QMainWindow):
                 "Buscar",
                 f"No se encontró '{palabra}' en el código."
             )
+
+    def analizar_codigo(self):
+        codigo = self.editorCodigo.toPlainText()
+
+        self.tituloResultados.clear()
+
+        if not codigo.strip():
+            self.tituloResultados.setTextColor(
+                QColor("#FF7777")
+            )
+            self.tituloResultados.append(
+                "Escribe un programa antes de analizar."
+            )
+            return
+
+        valido, resultado = analizar(codigo)
+
+        if valido:
+            self.tituloResultados.setTextColor(
+                QColor("#70D890")
+            )
+            self.tituloResultados.append(
+                "Análisis léxico correcto."
+            )
+            self.tituloResultados.append(
+                "Análisis sintáctico correcto."
+            )
+            self.tituloResultados.append(
+                "Programa ALMA válido."
+            )
+
+        else:
+            self.tituloResultados.setTextColor(
+                QColor("#FF7777")
+            )
+            self.tituloResultados.append(
+                "Se encontraron errores:"
+            )
+
+            for error in resultado:
+                self.tituloResultados.append(error)
 
 
 
