@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ventanaPrincipal</class>
+ <widget class="QMainWindow" name="ventanaPrincipal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ALMA</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #F8F7FC;
+}
+
+QWidget#centralwidget {
+    background-color: #F8F7FC;
+}
+
+QLabel {
+    color: #17151F;
+}
+
+QPushButton {
+    background-color: #C4B5FD;
+    color: #17151F;
+    border: 1px solid #A78BFA;
+    border-radius: 7px;
+    padding: 7px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #DDD6FE;
+}
+
+QLineEdit {
+    background-color: white;
+    color: #17151F;
+    border: 2px solid #C4B5FD;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+QPlainTextEdit {
+    background-color: #17151F;
+    color: #F5F3FF;
+    border: 2px solid #C4B5FD;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: Consolas;
+    font-size: 13px;
+    selection-background-color: #65548A;
+}
+
+QTextEdit {
+    background-color: #EDE9FE;
+    color: #17151F;
+    border: 2px solid #C4B5FD;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: Consolas;
+    font-size: 12px;
+}
+
+QPushButton#btnAnalizar {
+    background-color: #C4B5FD;
+    color: #17151F;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton#btnBuscar {
+    background-color: #17151F;
+    color: white;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="layoutDirection">
+    <enum>Qt::LayoutDirection::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralwidget {
+    background-color: #F8F7FF;
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>20</number>
+    </property>
+    <property name="leftMargin">
+     <number>9</number>
+    </property>
+    <property name="rightMargin">
+     <number>25</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="ALMA">
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #17151F;
+    font-size: 30px;
+    font-weight: bold;
+}</string>
+      </property>
+      <property name="text">
+       <string>ALMA</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="subtituloALMA">
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>-1</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: #65548A;
+    font-size: 14px;
+    font-style: italic;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Lenguaje de Programación</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="btnNuevo">
+        <property name="font">
+         <font>
+          <family>Traditional Arabic</family>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Nuevo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAbrir">
+        <property name="font">
+         <font>
+          <family>Traditional Arabic</family>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Abrir</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnGuardar">
+        <property name="font">
+         <font>
+          <family>Traditional Arabic</family>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Guardar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnCortar">
+        <property name="font">
+         <font>
+          <family>Traditional Arabic</family>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Cortar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnCopiar">
+        <property name="font">
+         <font>
+          <family>Traditional Arabic</family>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Copiar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnPegar">
+        <property name="font">
+         <font>
+          <family>Traditional Arabic</family>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Pegar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="entradaBuscar">
+        <property name="font">
+         <font>
+          <family>Traditional Arabic</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Buscar en el código...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnBuscar">
+        <property name="font">
+         <font>
+          <family>Traditional Arabic</family>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Buscar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPlainTextEdit" name="editorCodigo">
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="plainText">
+       <string>INICIO
+GUARDAR numero = 10
+MOSTRAR numero
+FIN</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnAnalizar">
+      <property name="font">
+       <font>
+        <family>Traditional Arabic</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #7C3AED;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #6D28D9;
+}</string>
+      </property>
+      <property name="text">
+       <string>Analizar Código</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="Resultados">
+      <property name="font">
+       <font>
+        <family>Traditional Arabic</family>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Resultados y errores</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="tituloResultados">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Aquí aparecerán los resultados del análisis...</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
